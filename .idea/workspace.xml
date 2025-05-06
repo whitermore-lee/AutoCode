@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="" />
+    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildPo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/PropertiesUtiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/PropertiesUtiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/RunApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/RunApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bulider/BuildTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/bulider/BuildTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/utils/PropertiesUtiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/utils/PropertiesUtiles.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +38,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -27,6 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Constants.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PropertiesUtiles.executor": "Run",
     "Application.RunApplication.executor": "Debug",
@@ -36,8 +61,10 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.DemoApplication (1).executor": "Debug",
     "Spring Boot.DemoApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
@@ -50,7 +77,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.kotlinCompiler",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -64,7 +91,20 @@
       <recent name="D:\JPoject\automatic_code\auto_code\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunApplication">
+  <component name="RunManager" selected="Application.Constants">
+    <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.bean.Constants" />
+      <module name="auto_code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="auto_code" />
@@ -126,6 +166,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Constants" />
         <item itemvalue="Application.RunApplication" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="Application.Main" />
@@ -154,11 +195,47 @@
       <workItem from="1746348492689" duration="4469000" />
       <workItem from="1746353238075" duration="481000" />
       <workItem from="1746423076210" duration="11136000" />
+      <workItem from="1746497217796" duration="9748000" />
+      <workItem from="1746522043341" duration="325000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.example.bean.TableInfo" memberName="haveDate" />
+        <PinnedItemInfo parentTag="org.example.bean.FieldInfo" memberName="propertyName" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

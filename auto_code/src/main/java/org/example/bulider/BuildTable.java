@@ -11,7 +11,9 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class BuildTable {
     private  static  String SQL_SHOW_INDEX_FROM = "show index from %s";
@@ -64,6 +66,7 @@ public class BuildTable {
                 logger.info("tableinfo:{}",JsonUtils.convertObjectToJson(tableInfo));
 //                readFieldInfo(tableInfo);
 //                logger.info("表：{},备注:{},javabean:{},javaparambean:{}", tableInfo.getTableName(), tableInfo.getComment(), tableInfo.getBeanName(), tableInfo.getBeanParamName());
+                tableInfoList.add(tableInfo);
             }
         } catch (Exception e) {
             logger.error("读取表失败");
@@ -93,6 +96,9 @@ public class BuildTable {
         PreparedStatement preparedStatement = null;
         ResultSet filedResultSet = null;
         try {
+            Boolean haveDataTime = false;
+            Boolean haveBigDecimal = false;
+            Boolean haveData = false;
             preparedStatement = connection.prepareStatement(String.format(SQL_SHOW_FULL_FIELD_FROM,tableInfo.getTableName()));
             filedResultSet = preparedStatement.executeQuery();
             while (filedResultSet.next()) {
@@ -115,22 +121,19 @@ public class BuildTable {
                 fieldInfo.setJavaType(processJavaType(type));
 
                 if(ArrayUtils.contains(Constants.SQL_DATA_TIME_TYPE,type)){
-                    tableInfo.setHaveDateTime(true);
-                }else{
-                    tableInfo.setHaveDateTime(false);
+                    haveDataTime = true;
                 }
-                if (ArrayUtils.contains(Constants.SQL_DATA_TYPE,type)){
-                    tableInfo.setHaveDate(true);
-                }else{
-                    tableInfo.setHaveDate(false);
+                if(ArrayUtils.contains(Constants.SQL_DATA_TYPE,type)){
+                    haveData = true;
                 }
                 if(ArrayUtils.contains(Constants.SQL_DECIMAL_TYPE,type)){
-                    tableInfo.setHaveBigDecimal(true);
-                }else{
-                    tableInfo.setHaveBigDecimal(false);
+                    haveBigDecimal = true;
                 }
 //                logger.info("字段:" + filed + " 类型:" + type + " extra:" + extra + " 备注:" + comment);
             }
+            tableInfo.setHaveBigDecimal(haveBigDecimal);
+            tableInfo.setHaveDate(haveData);
+            tableInfo.setHaveDateTime(haveDataTime);
             tableInfo.setFieldsList(fieldInfoList);//设置索引
         } catch (Exception e) {
             logger.info("读取字段失败",e);
@@ -158,6 +161,10 @@ public class BuildTable {
         ResultSet resultSet = null;
 
         try {
+            Map<String,FieldInfo> fieldInfoMap = new HashMap<>();
+            for(FieldInfo fieldInfo:tableInfo.getFieldsList()){
+                fieldInfoMap.put(fieldInfo.getFieldName(),fieldInfo);
+            }
             preparedstatement = connection.prepareStatement(String.format(SQL_SHOW_INDEX_FROM, tableInfo.getTableName()));
             resultSet = preparedstatement.executeQuery();
             while (resultSet.next()) {
@@ -172,11 +179,7 @@ public class BuildTable {
                     keyFieldInfoList = new ArrayList<>();
                     tableInfo.getKeyIndexMap().put(keyName, keyFieldInfoList);
                 }
-                for (FieldInfo fieldInfo : tableInfo.getFieldsList()) {
-                    if (fieldInfo.getFieldName().equals(cloumnName)) {
-                        keyFieldInfoList.add(fieldInfo);
-                    }
-                }
+                keyFieldInfoList.add(fieldInfoMap.get(cloumnName));
             }
         } catch (SQLException e) {
             logger.error("读取索引失败", e);

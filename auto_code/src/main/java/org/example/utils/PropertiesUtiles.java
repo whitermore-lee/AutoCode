@@ -2,6 +2,7 @@ package org.example.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -13,8 +14,8 @@ public class PropertiesUtiles {
         InputStream inputStream = null;
         try {
             inputStream = PropertiesUtiles.class.getClassLoader().getResourceAsStream("application.properties");
-            properties.load(inputStream);
-
+            properties.load(new InputStreamReader(inputStream,"UTF-8"));
+            ;
             Iterator<Object> iterator = properties.keySet().iterator();
             while (iterator.hasNext()) {
                 String key = iterator.next().toString();
