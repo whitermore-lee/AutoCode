@@ -4,27 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildPo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/DateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="添加pojo实体类生成方法及class类entity类注释">
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/DateUtils.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/PropertiesUtiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/PropertiesUtiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildPo.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildPo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/DateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/RunApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/RunApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bulider/BuildTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/bulider/BuildTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/utils/PropertiesUtiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/target/classes/org/example/utils/PropertiesUtiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/RunApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/FieldInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bean/TableInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bulider/BuildTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/bulider/StringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/utils/JsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/target/classes/org/example/utils/PropertiesUtiles.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BuildBase.executor": "Run",
     "Application.Constants.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PropertiesUtiles.executor": "Run",
@@ -91,7 +90,20 @@
       <recent name="D:\JPoject\automatic_code\auto_code\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Constants">
+  <component name="RunManager" selected="Application.RunApplication">
+    <configuration name="BuildBase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.bulider.BuildBase" />
+      <module name="auto_code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.bulider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.bean.Constants" />
       <module name="auto_code" />
@@ -111,19 +123,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PropertiesUtiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.utils.PropertiesUtiles" />
-      <module name="auto_code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Constants" />
         <item itemvalue="Application.RunApplication" />
+        <item itemvalue="Application.BuildBase" />
+        <item itemvalue="Application.Constants" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.PropertiesUtiles" />
       </list>
     </recent_temporary>
   </component>
@@ -196,8 +195,18 @@
       <workItem from="1746353238075" duration="481000" />
       <workItem from="1746423076210" duration="11136000" />
       <workItem from="1746497217796" duration="9748000" />
-      <workItem from="1746522043341" duration="325000" />
+      <workItem from="1746522043341" duration="1415000" />
+      <workItem from="1746779531927" duration="16074000" />
     </task>
+    <task id="LOCAL-00001" summary="添加pojo实体类生成方法及class类entity类注释">
+      <option name="closed" value="true" />
+      <created>1746522550598</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746522550598</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +215,17 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
       <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
         <entry key="User">
           <value>
             <list>
@@ -223,11 +243,32 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加pojo实体类生成方法及class类entity类注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加pojo实体类生成方法及class类entity类注释" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
