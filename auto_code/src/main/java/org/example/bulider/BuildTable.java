@@ -58,7 +58,7 @@ public class BuildTable {
                 tableInfo.setTableName(tableName);
                 tableInfo.setBeanName(beanName);
                 tableInfo.setComment(comment);
-                tableInfo.setBeanParamName(beanName + Constants.SUFFIX_BEAN_PARAM);
+                tableInfo.setBeanParamName(beanName + Constants.SUFFIX_BEAN_QUERY);
                 readFieldInfo(tableInfo);
 //                logger.info("表格转换json:{}" ,JsonUtils.convertObjectToJson(tableInfo));
 //                logger.info("字段转换json:{}",JsonUtils.convertObjectToJson(fieldInfoLIst));

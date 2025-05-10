@@ -45,11 +45,13 @@ public class BuildPo{
                     TOJSON_FILED = true;
                     break;
                 }
+
             }
             if(TOJSON_FILED){
                 bufferedWriter.write(Constants.IGNORE_BEAN_TOJSON_CLASS+";");
                 bufferedWriter.newLine();
             }
+
 
             if(tableInfo.getHaveDate()||tableInfo.getHaveDateTime()){
                 bufferedWriter.write("import java.util.Date;");
@@ -58,6 +60,11 @@ public class BuildPo{
                 bufferedWriter.write(Constants.BEAN_DATE_FORMAT_CLASS+";");
                 bufferedWriter.newLine();
                 bufferedWriter.write(Constants.BEAN_DATE_UNFORMAT_CLASS+";");
+                bufferedWriter.newLine();
+                //date枚举
+                bufferedWriter.write("import "+Constants.PACKAGE_ENUMS+".DateTimePatternEnum;");
+                bufferedWriter.newLine();
+                bufferedWriter.write("import "+Constants.PACKAGE_UTILS+".DateUtils;");
                 bufferedWriter.newLine();
             }
             if(tableInfo.getHaveBigDecimal()){
@@ -122,8 +129,17 @@ public class BuildPo{
 
             /*重写toString方法*/
             StringBuffer toStringBuffer = new StringBuffer();
-            for (final FieldInfo fieldInfo:tableInfo.getFieldsList()){
-                toStringBuffer.append("\""+fieldInfo.getComment()+":\"+("+fieldInfo.getPropertyName()+"== null? \"空\" :"+fieldInfo.getPropertyName()+")+");
+            Integer index  = 0;
+
+            for (FieldInfo fieldInfo:tableInfo.getFieldsList()){
+                index++;
+                String properName = fieldInfo.getPropertyName();
+                if(ArrayUtils.contains(Constants.SQL_DATA_TIME_TYPE,fieldInfo.getSqlType())){
+                    properName = "DateUtils.formatDate("+properName+",DateTimePatternEnum.YYYY_MM_DD_HH_MM_SS.getPattern())";
+                } else if (ArrayUtils.contains(Constants.SQL_DATA_TYPE,fieldInfo.getSqlType())) {
+                    properName = "DateUtils.formatDate("+properName+",DateTimePatternEnum.YYYY_MM_DD.getPattern())";
+                }
+                toStringBuffer.append("\""+fieldInfo.getComment()+":\"+("+fieldInfo.getPropertyName()+"== null? \"空 ,\" :"+properName+")+");
                 toStringBuffer.append("\n");
                 toStringBuffer.append("\t\t\t\t");
             }
@@ -136,7 +152,7 @@ public class BuildPo{
             bufferedWriter.newLine();
             bufferedWriter.write("\t}");
 
-
+            bufferedWriter.newLine();
             bufferedWriter.write("}");
             bufferedWriter.flush();
         } catch (Exception e) {

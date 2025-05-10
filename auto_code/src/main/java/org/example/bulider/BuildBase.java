@@ -15,6 +15,10 @@ public class BuildBase {
     private static final Logger logger = (Logger) LoggerFactory.getLogger(BuildBase.class);
     public static void execute(){
         List<String> headerInfoList = new ArrayList<String>();
+        /*生成date枚举*/
+        headerInfoList.add("package " +Constants.PACKAGE_ENUMS+";");
+        build(headerInfoList,"DateTimePatternEnum",Constants.PATH_ENUMS);
+        headerInfoList.clear();
         headerInfoList.add("package "+Constants.PACKAGE_UTILS+";");
         build(headerInfoList,"DateUtils",Constants.PATH_UTILS);
     }
@@ -47,7 +51,9 @@ public class BuildBase {
             for (String header : headerInfoList){
                 bufferedWriter.write(header);
                 bufferedWriter.newLine();
-                bufferedWriter.newLine();
+                if(header.contains("package")){
+                    bufferedWriter.newLine();
+                }
             }
             String line = null;
             while ((line=bufferedReader.readLine())!=null){
