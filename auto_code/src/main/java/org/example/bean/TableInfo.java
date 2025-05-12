@@ -1,5 +1,6 @@
 package org.example.bean;
 
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,9 @@ public class TableInfo {
     private String beanParamName;//参数名称
     private String Comment;//表注释
     private List<FieldInfo> fieldsList;//字段名
+    private List<FieldInfo> fieldExtendList;//扩展字段属性
     private Map<String,List<FieldInfo>> keyIndexMap = new LinkedHashMap<>();//唯一索引集合
+    private Boolean haveAutoIncrement;//是否自增长
     /*是否有相关类型*/
     private Boolean haveDate;
     private Boolean haveTime;
@@ -86,4 +89,11 @@ public class TableInfo {
         this.haveBigDecimal = haveBigDecimal;
     }
 
+    public List<FieldInfo> getFieldExtendList() {
+        return fieldExtendList;
+    }
+
+    public void setFieldExtendList(List<FieldInfo> fieldExtendList) {
+        this.fieldExtendList = fieldExtendList;
+    }
 }

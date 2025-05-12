@@ -7,6 +7,7 @@ public class Constants {
     public static String AUTHOR_COMMENT; //生成作者名称
     public static Boolean IGNORE_TABLE_PERFIX;
     public static String SUFFIX_BEAN_QUERY;
+    public static String SUFFIX_MAPPER;//mapper后缀
 //    文件路径
     public static String PATH_BASE;
     public static String PACKAGE_BASE;
@@ -22,6 +23,10 @@ public class Constants {
 //    枚举
     public static String PACKAGE_ENUMS;
     public static String PATH_ENUMS;
+//  Basemapper
+    public static String PACKAGE_MAPPER;
+    public static String PATH_MAPPER;
+    public static String PATH_MAPPER_XML;
 //    需要忽略的属性
     public static String IGNORE_BEAN_TOJSON_FILED;
     public static String IGNORE_BEAN_TOJSON_EXPRESSION;
@@ -45,6 +50,7 @@ public class Constants {
         SUFFIX_BEAN_QUERY_FUZZY = PropertiesUtiles.getProperty("suffix.bean.query.fuzzy");
         SUFFIX_BEAN_QUERY_TIME_START = PropertiesUtiles.getProperty("suffix.bean.query.time.start");
         SUFFIX_BEAN_QUERY_TIME_END = PropertiesUtiles.getProperty("suffix.bean.query.time.end");
+        SUFFIX_MAPPER = PropertiesUtiles.getProperty("suffix.mapper");
         /*作者信息*/
         AUTHOR_COMMENT = String.valueOf(PropertiesUtiles.getProperty("author.comment"));
         /*文件路径*/
@@ -54,6 +60,7 @@ public class Constants {
         PACKAGE_UTILS = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.utils");//工具类
         PACKAGE_ENUMS = PACKAGE_BASE +"."+PropertiesUtiles.getProperty("packgae.enum");//日期枚举
         PACKAGE_QUERY = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.query");//Query
+        PACKAGE_MAPPER = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.mapper");//Mapper
 
         PATH_BASE = PropertiesUtiles.getProperty("path.base");//import包地址
         PATH_BASE = PATH_BASE + PATH_JAVA ;;
@@ -63,6 +70,9 @@ public class Constants {
         PATH_UTILS = PATH_BASE+"/"+PACKAGE_UTILS.replace(".","/");//工具类path
         PATH_ENUMS = PATH_BASE+"/"+PACKAGE_ENUMS.replace(".","/");//枚举path
         PATH_QUERY = PATH_BASE+"/"+PACKAGE_QUERY.replace(".","/");
+        PATH_MAPPER = PATH_BASE+"/"+PACKAGE_MAPPER.replace(".","/");
+
+        PATH_MAPPER_XML = PropertiesUtiles.getProperty("path.base")+PATH_RESOURCES+"/"+PACKAGE_MAPPER.replace(".","/");
         /*需要忽略的属性*/
         IGNORE_BEAN_TOJSON_FILED = PropertiesUtiles.getProperty("ignore.bean.tojson.filed");
         IGNORE_BEAN_TOJSON_EXPRESSION = PropertiesUtiles.getProperty("ignore.bean.tojson.expression");
@@ -73,6 +83,7 @@ public class Constants {
         BEAN_DATE_FORMAT_CLASS = PropertiesUtiles.getProperty("bean.date.format.class");
         BEAN_DATE_UNFORMAT_EXPRESSION = PropertiesUtiles.getProperty("bean.date.unformat.expression");
         BEAN_DATE_UNFORMAT_CLASS = PropertiesUtiles.getProperty("bean.date.unformat.class");
+
     }
 
     /*数据类型*/
@@ -84,8 +95,7 @@ public class Constants {
     public static String[] SQL_LONG_TYPE = new String[]{"bigint"};
 
     public static void main(String[] args) {
-        System.out.println(PATH_PO);
-        System.out.println(PACKAGE_PO);
+        System.out.println(PATH_MAPPER_XML);
 
     }
 

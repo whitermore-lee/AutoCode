@@ -48,11 +48,11 @@ public class BuildQuery {
             bufferedWriter.newLine();
 
             BuildComment.createClassComment(bufferedWriter,tableInfo.getComment()+"查询对象");//类注释
-            bufferedWriter.write("public class " +QueryName+"{");
+            bufferedWriter.write("public class " +QueryName+" extends BaseQuery"+"{");
             bufferedWriter.newLine();
 
-            /*list存放query新字段*/
-            List<FieldInfo> infoList = new ArrayList<FieldInfo>();
+//            /*list存放query新字段*/
+//            List<FieldInfo> infoList = new ArrayList<FieldInfo>();
             /*class类字段生成*/
             for (FieldInfo fieldInfo:tableInfo.getFieldsList()){
                 //字段描述
@@ -67,10 +67,6 @@ public class BuildQuery {
                     bufferedWriter.newLine();
                     bufferedWriter.newLine();
 
-                    FieldInfo fuzzyField = new FieldInfo();
-                    fuzzyField.setJavaType(fieldInfo.getJavaType());
-                    fuzzyField.setPropertyName(propertyName);
-                    infoList.add(fuzzyField);
                 }
 //                日期类型参数
                 if(ArrayUtils.contains(Constants.SQL_DATA_TIME_TYPE,fieldInfo.getSqlType())||ArrayUtils.contains(Constants.SQL_DATA_TIME_TYPE,fieldInfo.getSqlType())){
@@ -78,43 +74,19 @@ public class BuildQuery {
                     bufferedWriter.newLine();
                     bufferedWriter.newLine();
 
-                    FieldInfo timeStartField = new FieldInfo();
-                    timeStartField.setJavaType("String");
-                    timeStartField.setPropertyName(fieldInfo.getPropertyName()+Constants.SUFFIX_BEAN_QUERY_TIME_START);
-                    infoList.add(timeStartField);
 
                     bufferedWriter.write("\tprivate String "+fieldInfo.getPropertyName()+Constants.SUFFIX_BEAN_QUERY_TIME_END+";");
                     bufferedWriter.newLine();
                     bufferedWriter.newLine();
 
-                    FieldInfo timeEndField = new FieldInfo();
-                    timeEndField.setJavaType("String");
-                    timeEndField.setPropertyName(fieldInfo.getPropertyName()+Constants.SUFFIX_BEAN_QUERY_TIME_END);
-                    infoList.add(timeEndField);
                 }
             }
 
             List<FieldInfo> fieldInfoList = tableInfo.getFieldsList();
-            fieldInfoList.addAll(infoList);
-            /*set和get方法*/
-            for (FieldInfo field:tableInfo.getFieldsList()){
-                String tempField = StringUtils.uperCaseFirstLetter(field.getPropertyName());
-                bufferedWriter.write("\t"+"public void set"+tempField+"("+field.getJavaType()+ " "+field.getPropertyName()+"){");
-                bufferedWriter.newLine();
-                bufferedWriter.write("\t\tthis."+field.getPropertyName()+"="+field.getPropertyName()+";");
-                bufferedWriter.newLine();
-                bufferedWriter.write("\t"+"}");
-                bufferedWriter.newLine();
-                bufferedWriter.newLine();
-
-                bufferedWriter.write("\t"+"public "+field.getJavaType()+" get"+tempField+"(){");
-                bufferedWriter.newLine();
-                bufferedWriter.write("\t\treturn this."+field.getPropertyName()+";");
-                bufferedWriter.newLine();
-                bufferedWriter.write("\t"+"}");
-                bufferedWriter.newLine();
-                bufferedWriter.newLine();
-            }
+//            fieldInfoList.addAll(infoList);
+//            query调用setget
+            buildGetSet(bufferedWriter,fieldInfoList);
+            buildGetSet(bufferedWriter,tableInfo.getFieldExtendList());
 
             bufferedWriter.newLine();
             bufferedWriter.write("}");
@@ -137,5 +109,26 @@ public class BuildQuery {
         }
 
 
+    }
+    public static void buildGetSet(BufferedWriter bufferedWriter,List<FieldInfo> fieldInfoList) throws Exception{
+        /*set和get方法*/
+        for (FieldInfo field:fieldInfoList){
+            String tempField = StringUtils.uperCaseFirstLetter(field.getPropertyName());
+            bufferedWriter.write("\t"+"public void set"+tempField+"("+field.getJavaType()+ " "+field.getPropertyName()+"){");
+            bufferedWriter.newLine();
+            bufferedWriter.write("\t\tthis."+field.getPropertyName()+"="+field.getPropertyName()+";");
+            bufferedWriter.newLine();
+            bufferedWriter.write("\t"+"}");
+            bufferedWriter.newLine();
+            bufferedWriter.newLine();
+
+            bufferedWriter.write("\t"+"public "+field.getJavaType()+" get"+tempField+"(){");
+            bufferedWriter.newLine();
+            bufferedWriter.write("\t\treturn this."+field.getPropertyName()+";");
+            bufferedWriter.newLine();
+            bufferedWriter.write("\t"+"}");
+            bufferedWriter.newLine();
+            bufferedWriter.newLine();
+        }
     }
 }

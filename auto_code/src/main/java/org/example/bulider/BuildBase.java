@@ -21,6 +21,28 @@ public class BuildBase {
         headerInfoList.clear();
         headerInfoList.add("package "+Constants.PACKAGE_UTILS+";");
         build(headerInfoList,"DateUtils",Constants.PATH_UTILS);
+        headerInfoList.clear();
+
+        /*BaseMapper生成*/
+        headerInfoList.add("package "+Constants.PACKAGE_MAPPER+";");
+        build(headerInfoList,"BaseMapper",Constants.PATH_MAPPER);
+        headerInfoList.clear();
+
+        /*生成pageSize枚举*/
+        headerInfoList.add("package "+Constants.PACKAGE_ENUMS+";");
+        build(headerInfoList,"PageSize",Constants.PATH_ENUMS);
+        headerInfoList.clear();
+
+        /*生成分页信息*/
+        headerInfoList.add("package "+Constants.PACKAGE_QUERY+";");
+        headerInfoList.add("import "+Constants.PACKAGE_ENUMS+".PageSize;");
+        build(headerInfoList,"SimplePage",Constants.PATH_QUERY);
+        headerInfoList.clear();
+
+        /*生成pageSize枚举*/
+        headerInfoList.add("package "+Constants.PACKAGE_QUERY+";");
+        build(headerInfoList,"BaseQuery",Constants.PATH_QUERY);
+        headerInfoList.clear();
     }
     private static void build(List<String> headerInfoList,String fileName,String outPutPath){
         File file = new File(outPutPath);
@@ -51,9 +73,7 @@ public class BuildBase {
             for (String header : headerInfoList){
                 bufferedWriter.write(header);
                 bufferedWriter.newLine();
-                if(header.contains("package")){
-                    bufferedWriter.newLine();
-                }
+                bufferedWriter.newLine();
             }
             String line = null;
             while ((line=bufferedReader.readLine())!=null){

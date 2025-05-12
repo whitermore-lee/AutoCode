@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="增加工具类生成方法，添加实体类注解">
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/DateTimePatternEnum.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="query查询类生成方法实现">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildMapperXml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseMapper.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseQuery.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/PageSize.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/SimplePage.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/TableInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/TableInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildPo.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildPo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/utils/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/automatic/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/automatic/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +65,11 @@
     "Application.PropertiesUtiles.executor": "Run",
     "Application.RunApplication.executor": "Run",
     "Application.StringUtils.executor": "Run",
+    "JUnit.SelectTest.insert.executor": "Debug",
+    "JUnit.SelectTest.insertBatch.executor": "Debug",
+    "JUnit.SelectTest.insertOrUpdate.executor": "Debug",
+    "JUnit.SelectTest.selectList.executor": "Run",
+    "JUnit.SelectTest.updateByPrimaryKey.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -92,46 +105,7 @@
       <recent name="D:\JPoject\automatic_code\auto_code\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunApplication">
-    <configuration name="BuildBase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.bulider.BuildBase" />
-      <module name="auto_code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.bulider.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Info" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.entity.po.Info" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.entity.po.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InfoBeauty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.entity.po.InfoBeauty" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.entity.po.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SelectTest.deleteByPrimaryKey">
     <configuration name="RunApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.RunApplication" />
       <module name="auto_code" />
@@ -145,15 +119,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.bulider.StringUtils" />
-      <module name="auto_code" />
+    <configuration name="SelectTest.deleteByPrimaryKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.bulider.*" />
+          <option name="PATTERN" value="automatic.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="automatic.demo" />
+      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
+      <option name="METHOD_NAME" value="deleteByPrimaryKey" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelectTest.insertBatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatic.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatic.demo" />
+      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
+      <option name="METHOD_NAME" value="insertBatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelectTest.insertOrUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatic.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatic.demo" />
+      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
+      <option name="METHOD_NAME" value="insertOrUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelectTest.updateByPrimaryKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="automatic.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="automatic.demo" />
+      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
+      <option name="METHOD_NAME" value="updateByPrimaryKey" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SelectTest.deleteByPrimaryKey" />
+        <item itemvalue="JUnit.SelectTest.updateByPrimaryKey" />
         <item itemvalue="Application.RunApplication" />
-        <item itemvalue="Application.Info" />
-        <item itemvalue="Application.InfoBeauty" />
-        <item itemvalue="Application.BuildBase" />
-        <item itemvalue="Application.StringUtils" />
+        <item itemvalue="JUnit.SelectTest.insertBatch" />
+        <item itemvalue="JUnit.SelectTest.insertOrUpdate" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +224,8 @@
       <workItem from="1746497217796" duration="9748000" />
       <workItem from="1746522043341" duration="1415000" />
       <workItem from="1746779531927" duration="18237000" />
-      <workItem from="1746858837896" duration="8887000" />
+      <workItem from="1746858837896" duration="9213000" />
+      <workItem from="1747013737071" duration="36318000" />
     </task>
     <task id="LOCAL-00001" summary="添加pojo实体类生成方法及class类entity类注释">
       <option name="closed" value="true" />
@@ -217,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746798696322</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="query查询类生成方法实现">
+      <option name="closed" value="true" />
+      <created>1746868168567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746868168567</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +326,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加pojo实体类生成方法及class类entity类注释" />
     <MESSAGE value="增加工具类生成方法，添加实体类注解" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加工具类生成方法，添加实体类注解" />
+    <MESSAGE value="query查询类生成方法实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="query查询类生成方法实现" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
