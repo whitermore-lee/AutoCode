@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="query查询类生成方法实现">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildMapperXml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseMapper.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/PageSize.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/SimplePage.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/TableInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/TableInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/automatic/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/automatic/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="Mapper及xml文件生成">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +45,7 @@
     "Application.PropertiesUtiles.executor": "Run",
     "Application.RunApplication.executor": "Run",
     "Application.StringUtils.executor": "Run",
+    "JUnit.SelectTest.deleteByPrimaryKey.executor": "Debug",
     "JUnit.SelectTest.insert.executor": "Debug",
     "JUnit.SelectTest.insertBatch.executor": "Debug",
     "JUnit.SelectTest.insertOrUpdate.executor": "Debug",
@@ -225,7 +206,7 @@
       <workItem from="1746522043341" duration="1415000" />
       <workItem from="1746779531927" duration="18237000" />
       <workItem from="1746858837896" duration="9213000" />
-      <workItem from="1747013737071" duration="36318000" />
+      <workItem from="1747013737071" duration="36529000" />
     </task>
     <task id="LOCAL-00001" summary="添加pojo实体类生成方法及class类entity类注释">
       <option name="closed" value="true" />
@@ -251,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746868168567</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Mapper及xml文件生成">
+      <option name="closed" value="true" />
+      <created>1747051893772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747051893772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +316,8 @@
     <MESSAGE value="添加pojo实体类生成方法及class类entity类注释" />
     <MESSAGE value="增加工具类生成方法，添加实体类注解" />
     <MESSAGE value="query查询类生成方法实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="query查询类生成方法实现" />
+    <MESSAGE value="Mapper及xml文件生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapper及xml文件生成" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

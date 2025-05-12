@@ -10,7 +10,6 @@ Controller
 
 Service
 
-impl接口
 
-生成Mapper以及xml配置文件
+Mapper以及xml配置文件（实现）
 
