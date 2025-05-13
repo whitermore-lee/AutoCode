@@ -17,7 +17,14 @@ public class Constants {
     public static String PATH_QUERY;
     public static String PACKAGE_QUERY;
     public static String PATH_RESOURCES = "resources";
-//    工具类位置
+    public static String PACKAGE_SERVICE;
+    public static String PACKAGE_SERVICE_IMPL;
+    public static String PATH_SERVICE;
+    public static String PATH_SERVICE_IMPL;
+    public static String PACKAGE_VO;//分页
+    public static String PATH_VO;
+
+    //    工具类位置
     public static String PACKAGE_UTILS;
     public static String PATH_UTILS;
 //    枚举
@@ -61,6 +68,9 @@ public class Constants {
         PACKAGE_ENUMS = PACKAGE_BASE +"."+PropertiesUtiles.getProperty("packgae.enum");//日期枚举
         PACKAGE_QUERY = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.query");//Query
         PACKAGE_MAPPER = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.mapper");//Mapper
+        PACKAGE_SERVICE =PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.service");
+        PACKAGE_SERVICE_IMPL = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.service.impl");
+        PACKAGE_VO = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.vo");
 
         PATH_BASE = PropertiesUtiles.getProperty("path.base");//import包地址
         PATH_BASE = PATH_BASE + PATH_JAVA ;;
@@ -71,8 +81,13 @@ public class Constants {
         PATH_ENUMS = PATH_BASE+"/"+PACKAGE_ENUMS.replace(".","/");//枚举path
         PATH_QUERY = PATH_BASE+"/"+PACKAGE_QUERY.replace(".","/");
         PATH_MAPPER = PATH_BASE+"/"+PACKAGE_MAPPER.replace(".","/");
+        PATH_SERVICE = PATH_BASE+"/"+PACKAGE_SERVICE.replace(".","/");
+        PATH_SERVICE_IMPL = PATH_BASE+"/"+PACKAGE_SERVICE_IMPL.replace(".","/");
+        PATH_VO = PATH_BASE+"/"+PACKAGE_VO.replace(".","/");
 
         PATH_MAPPER_XML = PropertiesUtiles.getProperty("path.base")+PATH_RESOURCES+"/"+PACKAGE_MAPPER.replace(".","/");
+
+
         /*需要忽略的属性*/
         IGNORE_BEAN_TOJSON_FILED = PropertiesUtiles.getProperty("ignore.bean.tojson.filed");
         IGNORE_BEAN_TOJSON_EXPRESSION = PropertiesUtiles.getProperty("ignore.bean.tojson.expression");
@@ -95,7 +110,7 @@ public class Constants {
     public static String[] SQL_LONG_TYPE = new String[]{"bigint"};
 
     public static void main(String[] args) {
-        System.out.println(PATH_MAPPER_XML);
+        System.out.println(PATH_SERVICE_IMPL);
 
     }
 

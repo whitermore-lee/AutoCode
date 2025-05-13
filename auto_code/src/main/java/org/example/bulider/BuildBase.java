@@ -43,6 +43,11 @@ public class BuildBase {
         headerInfoList.add("package "+Constants.PACKAGE_QUERY+";");
         build(headerInfoList,"BaseQuery",Constants.PATH_QUERY);
         headerInfoList.clear();
+
+        /*分页查询方法*/
+        headerInfoList.add("package "+Constants.PACKAGE_VO+";");
+        build(headerInfoList,"PaginationResultVO",Constants.PATH_VO);
+        headerInfoList.clear();
     }
     private static void build(List<String> headerInfoList,String fileName,String outPutPath){
         File file = new File(outPutPath);

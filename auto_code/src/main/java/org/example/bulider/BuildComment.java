@@ -27,6 +27,16 @@ public class BuildComment {
 
         bufferedWriter.write("//" +fieldComment==null?" ":"//"+fieldComment);
     }
+    public static void createFieldComment(BufferedWriter bufferedWriter,String fieldComment,String tableName)throws Exception{
+        bufferedWriter.write("/**");
+        bufferedWriter.newLine();
+        bufferedWriter.write("* @Description: " + fieldComment + " "+tableName);
+        bufferedWriter.newLine();
+        bufferedWriter.write("* @Author: " + Constants.AUTHOR_COMMENT);
+        bufferedWriter.newLine();
+        bufferedWriter.write("**/");
+        bufferedWriter.newLine();
+    }
     /*方法注解*/
     public static void createMethodComment(BufferedWriter bufferedWriter,String methodComment) throws Exception {
 

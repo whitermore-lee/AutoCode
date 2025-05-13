@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="Mapper及xml文件生成">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/PaginationResultVO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseMapper.txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseMapper.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/template/SimplePage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/SimplePage.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +49,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BuildBase.executor": "Run",
-    "Application.Constants.executor": "Run",
+    "Application.Constants.executor": "Debug",
     "Application.Info.executor": "Debug",
     "Application.InfoBeauty.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PropertiesUtiles.executor": "Run",
-    "Application.RunApplication.executor": "Run",
-    "Application.StringUtils.executor": "Run",
+    "Application.RunApplication.executor": "Debug",
+    "Application.StringUtils.executor": "Debug",
     "JUnit.SelectTest.deleteByPrimaryKey.executor": "Debug",
     "JUnit.SelectTest.insert.executor": "Debug",
     "JUnit.SelectTest.insertBatch.executor": "Debug",
@@ -86,13 +97,39 @@
       <recent name="D:\JPoject\automatic_code\auto_code\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SelectTest.deleteByPrimaryKey">
+  <component name="RunManager" selected="Application.RunApplication">
+    <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.bean.Constants" />
+      <module name="auto_code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.RunApplication" />
       <module name="auto_code" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.bulider.StringUtils" />
+      <module name="auto_code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.bulider.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,38 +148,6 @@
       <option name="PACKAGE_NAME" value="automatic.demo" />
       <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
       <option name="METHOD_NAME" value="deleteByPrimaryKey" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SelectTest.insertBatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="automatic.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="automatic.demo" />
-      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
-      <option name="METHOD_NAME" value="insertBatch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SelectTest.insertOrUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="automatic.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="automatic.demo" />
-      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
-      <option name="METHOD_NAME" value="insertOrUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunApplication" />
+        <item itemvalue="Application.StringUtils" />
+        <item itemvalue="Application.Constants" />
         <item itemvalue="JUnit.SelectTest.deleteByPrimaryKey" />
         <item itemvalue="JUnit.SelectTest.updateByPrimaryKey" />
-        <item itemvalue="Application.RunApplication" />
-        <item itemvalue="JUnit.SelectTest.insertBatch" />
-        <item itemvalue="JUnit.SelectTest.insertOrUpdate" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +211,8 @@
       <workItem from="1746522043341" duration="1415000" />
       <workItem from="1746779531927" duration="18237000" />
       <workItem from="1746858837896" duration="9213000" />
-      <workItem from="1747013737071" duration="36529000" />
+      <workItem from="1747013737071" duration="36564000" />
+      <workItem from="1747121859404" duration="11548000" />
     </task>
     <task id="LOCAL-00001" summary="添加pojo实体类生成方法及class类entity类注释">
       <option name="closed" value="true" />
@@ -240,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747051893772</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mapper及xml文件生成">
+      <option name="closed" value="true" />
+      <created>1747051962959</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747051962959</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
