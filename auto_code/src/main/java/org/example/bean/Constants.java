@@ -23,8 +23,12 @@ public class Constants {
     public static String PATH_SERVICE_IMPL;
     public static String PACKAGE_VO;//分页
     public static String PATH_VO;
+    public static String PACKAGE_EXCEPTION;
+    public static String PATH_EXCEPTION;
+    public static String PACKAGE_CONTROLLER;
+    public static String PATH_CONTROLLER;
 
-    //    工具类位置
+//    工具类位置
     public static String PACKAGE_UTILS;
     public static String PATH_UTILS;
 //    枚举
@@ -71,6 +75,8 @@ public class Constants {
         PACKAGE_SERVICE =PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.service");
         PACKAGE_SERVICE_IMPL = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.service.impl");
         PACKAGE_VO = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.vo");
+        PACKAGE_EXCEPTION = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.exception");
+        PACKAGE_CONTROLLER = PACKAGE_BASE+"."+PropertiesUtiles.getProperty("package.controller");
 
         PATH_BASE = PropertiesUtiles.getProperty("path.base");//import包地址
         PATH_BASE = PATH_BASE + PATH_JAVA ;;
@@ -84,6 +90,8 @@ public class Constants {
         PATH_SERVICE = PATH_BASE+"/"+PACKAGE_SERVICE.replace(".","/");
         PATH_SERVICE_IMPL = PATH_BASE+"/"+PACKAGE_SERVICE_IMPL.replace(".","/");
         PATH_VO = PATH_BASE+"/"+PACKAGE_VO.replace(".","/");
+        PATH_EXCEPTION = PATH_BASE+"/"+PACKAGE_EXCEPTION.replace(".","/");
+        PATH_CONTROLLER = PATH_BASE+"/"+PACKAGE_CONTROLLER.replace(".","/");
 
         PATH_MAPPER_XML = PropertiesUtiles.getProperty("path.base")+PATH_RESOURCES+"/"+PACKAGE_MAPPER.replace(".","/");
 

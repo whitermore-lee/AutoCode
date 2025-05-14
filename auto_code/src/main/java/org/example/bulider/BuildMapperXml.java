@@ -186,7 +186,7 @@ public class BuildMapperXml {
             /*查询数量*/
             bw.write("\t<!--查询数量-->");
             bw.newLine();
-            bw.write("\t<select id=\"selectCount\" resultType=\"java.lang.Long\">");
+            bw.write("\t<select id=\"selectCount\" resultType=\"java.lang.Integer\">");
             bw.newLine();
             bw.write("\t\tSELECT count(1) FROM "+tableInfo.getTableName()+" <include refid=\""+QUERY_CONDITION+"\"/>");
             bw.newLine();
@@ -325,9 +325,9 @@ public class BuildMapperXml {
             bw.write("\t\t<foreach collection=\"list\" item=\"item\" separator=\",\">");
             bw.newLine();
             for (final FieldInfo fieldInfo:tableInfo.getFieldsList()){
-                if (fieldInfo.getIsAutoIncrement()){
-                    continue;//id自增长不需要显示
-                }
+//                if (fieldInfo.getIsAutoIncrement()){
+//                    continue;//id自增长不需要显示
+//                }
                 insertProBuff.append("#{item."+fieldInfo.getPropertyName()+"}").append(",");
             }
             String insertPro = insertProBuff.substring(0,insertProBuff.lastIndexOf(","));

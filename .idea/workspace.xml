@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="Mapper及xml文件生成">
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/PaginationResultVO.txt" afterDir="false" />
+    <list default="true" id="f96cb4b6-039c-400c-8556-d3949b63f3f9" name="Changes" comment="Service及Impl文件生成">
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseController.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BusinessException.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/GlobalExceptionHandlerController.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/ResponseCodeEnum.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/ResponseVO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/RunApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bean/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildComment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildMapperXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildMapperXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/java/org/example/bulider/BuildServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseMapper.txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/BaseMapper.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_code/src/main/resources/template/SimplePage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto_code/src/main/resources/template/SimplePage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/automatic/demo/DemoApplication.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +74,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.DemoApplication (1).executor": "Debug",
     "Spring Boot.DemoApplication.executor": "Debug",
+    "Spring Boot.RunApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
@@ -95,6 +100,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JPoject\automatic_code\auto_code\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example" />
     </key>
   </component>
   <component name="RunManager" selected="Application.RunApplication">
@@ -153,22 +161,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectTest.updateByPrimaryKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="automatic.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="automatic.demo" />
-      <option name="MAIN_CLASS_NAME" value="automatic.demo.SelectTest" />
-      <option name="METHOD_NAME" value="updateByPrimaryKey" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="automatic.demo.DemoApplication" />
@@ -176,13 +168,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.RunApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunApplication" />
+        <item itemvalue="Spring Boot.RunApplication" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="Application.Constants" />
         <item itemvalue="JUnit.SelectTest.deleteByPrimaryKey" />
-        <item itemvalue="JUnit.SelectTest.updateByPrimaryKey" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +217,8 @@
       <workItem from="1746779531927" duration="18237000" />
       <workItem from="1746858837896" duration="9213000" />
       <workItem from="1747013737071" duration="36564000" />
-      <workItem from="1747121859404" duration="11548000" />
+      <workItem from="1747121859404" duration="11766000" />
+      <workItem from="1747177374577" duration="11806000" />
     </task>
     <task id="LOCAL-00001" summary="添加pojo实体类生成方法及class类entity类注释">
       <option name="closed" value="true" />
@@ -254,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747051962959</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Service及Impl文件生成">
+      <option name="closed" value="true" />
+      <created>1747133693144</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747133693144</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +345,8 @@
     <MESSAGE value="增加工具类生成方法，添加实体类注解" />
     <MESSAGE value="query查询类生成方法实现" />
     <MESSAGE value="Mapper及xml文件生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mapper及xml文件生成" />
+    <MESSAGE value="Service及Impl文件生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service及Impl文件生成" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

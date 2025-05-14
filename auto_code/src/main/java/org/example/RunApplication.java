@@ -24,6 +24,7 @@ public class RunApplication {
 
            BuildServiceImpl.execute(tableInfo);
 
+           BuildController.execute(tableInfo);
        }
     }
 }

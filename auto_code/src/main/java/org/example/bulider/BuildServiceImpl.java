@@ -63,7 +63,7 @@ public class BuildServiceImpl {
 
 
             BuildComment.createFieldComment(bufferedWriter,tableInfo.getComment()+" ServiceImpl",tableInfo.getBeanName());//类注释
-            bufferedWriter.write("@Service(\""+mapperBeanName+"\")");
+            bufferedWriter.write("@Service(\""+StringUtils.lowerCaseFirstLetter(tableInfo.getBeanName())+"Service\")");
             bufferedWriter.newLine();
             bufferedWriter.write("public class " +serviceImplName+" implements "+interfaceName+"{");
 
